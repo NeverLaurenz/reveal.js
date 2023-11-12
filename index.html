@@ -16,8 +16,88 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Reveal.JS</h1>
+					<h2>Eine Alternative zu Powerpoint</h2>
+					<div>Laurenz Niederseer</div>
+				</section>
+				<section>
+					<ul>
+						<h2>Warum sollte es das?</h2>
+						<ul>
+							<li class="fragment">Präsentationsfähigkeiten</li>
+							<li class="fragment">Programmierung der Folien</li>
+							<li class="fragment">Präsentieren von Templates</li>
+							<li class="fragment">Einbinden von Webseiten</li>
+							<li class="fragment">Kosten</li>
+						</ul>
+					</ul>
+				</section>
+				<section data-background-color="rgba(70,70,250,1)">
+					<pre>
+						<code>
+							rgba(70,70,250,1);
+						</code>
+					</pre>
+				</section>
+				<section data-background-image="https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1600">
+					<img data-src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1600" class="fragment">
+				</section>
+				<section>
+					<h1>HTML-Templates</h1>
+					<div class="wrapper">
+						<div class="sidebar">
+							&nbsp;
+						</div>
+						<div class="content">
+							&nbsp;
+						</div>
+					</div>
+				</section>
+				<section>
+					<table class="table">
+						<tr class="row">
+							<th class="cell">Head 1</th>
+							<th class="cell">Head 2</th>
+							<th class="cell">Head 3</th>
+						</tr>
+						<tr>
+							<td class="cell">Item 1</td>
+							<td class="cell">Item 2</td>
+							<td class="cell">Item 3</td>
+						</tr>
+						<tr>
+							<td class="cell">Item 4</td>
+							<td class="cell">Item 5</td>
+							<td class="cell">Item 6</td>
+						</tr>
+					</table>
+					<button class="button">Ich bin ein Button</button>
+				</section>
+				<section data-background-iframe="https://revealjs.com/"></section>
+				<section data-background-iframe="https://slides.com/pricing?h=1"></section>
+				<section data-background-iframe="https://www.microsoft.com/de-de/microsoft-365/business/compare-all-microsoft-365-business-products?market=de"></section>
+				<section>
+					<h2>Fazit</h2>
+					<table>
+						<tr>
+							<th>Pro</th>
+							<th>Cons</th>
+						</tr>
+						<tr>
+							<td>Framework kostenlos</td>
+							<td>Schwerer Einstieg</td>
+						</tr>
+						<tr>
+							<td>Einfaches einbinden von Webseiten</td>
+							<td>Mittelmäßge Dokumentation</td>
+						</tr>
+						<tr>
+							<td>Code Demonstration</td>
+							<td>Speicherung von Projekten</td>
+						</tr>
+					</table>
+				</section>
 			</div>
 		</div>
 
@@ -34,6 +114,13 @@
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script>
+			const button = document.getElementsByTagName('button');
+
+			button.addEventListener("click", (event) => {
+				alert('Ich bin ein Event');
 			});
 		</script>
 	</body>
