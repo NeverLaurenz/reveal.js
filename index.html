@@ -8,29 +8,86 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/sky.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.name {
+				position: relative;
+				bottom: 0;
+				float: right;
+				font-size: 15px;
+			}
+
+			.headline-small {
+				font-size: 60px !important;
+				margin-bottom: 100px !important;
+				margin-top: -100px !important;
+			}
+
+			.wrapper {
+				display: flex;
+				width: 100%;
+				height: 100%;
+				background-color: white;
+				padding: 20px;
+				border-radius: 20px;
+			}
+
+			.sidebar {
+				width: 30%;
+				height: 100%;
+			}
+
+			.content {
+				width: 65%;
+				padding-left: 5%;
+				height: 100%;
+				border-left: 2px solid black;
+				text-align: justify;
+			}
+
+			.table {
+				border: none;
+			}
+
+			.cell{
+				border-right: 1px solid black;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+
+			.button {
+				border: none;
+				border-radius: 10px;
+				background-color: rgba(70, 70, 250, 1);
+				color: white;
+				padding: 15px 20px;
+				cursor: pointer;
+				margin-top: 20px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Reveal.JS</h1>
-					<h2>Eine Alternative zu Powerpoint</h2>
-					<div>Laurenz Niederseer</div>
+					<h1>RevealJS</h1>
+					<h2>Eine Alternative zu Powerpoint?</h2>
+					<div class="name">Laurenz Niederseer</div>
 				</section>
 				<section>
+					<h2>Warum sollte es das?</h2>
 					<ul>
-						<h2>Warum sollte es das?</h2>
-						<ul>
-							<li class="fragment">Präsentationsfähigkeiten</li>
-							<li class="fragment">Programmierung der Folien</li>
-							<li class="fragment">Präsentieren von Templates</li>
-							<li class="fragment">Einbinden von Webseiten</li>
-							<li class="fragment">Kosten</li>
-						</ul>
+						<li class="fragment">Funktionen von Powerpoint</li>
+						<li class="fragment">Programmierung mit HTML oder Markdown</li>
+						<li class="fragment">Präsentieren von templates</li>
+						<li class="fragment">Einbinden von Webseiten</li>
+						<li class="fragment">Kosten</li>
 					</ul>
 				</section>
 				<section data-background-color="rgba(70,70,250,1)">
@@ -44,13 +101,17 @@
 					<img data-src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1600" class="fragment">
 				</section>
 				<section>
-					<h1>HTML-Templates</h1>
+					<h2 class="headline-small">HTML Template</h2>
 					<div class="wrapper">
 						<div class="sidebar">
-							&nbsp;
+							<ul>
+								<li>Item 1</li>
+								<li>Item 2</li>
+								<li>Item 3</li>
+							</ul>
 						</div>
 						<div class="content">
-							&nbsp;
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
 						</div>
 					</div>
 				</section>
@@ -75,26 +136,31 @@
 					<button class="button">Ich bin ein Button</button>
 				</section>
 				<section data-background-iframe="https://revealjs.com/"></section>
-				<section data-background-iframe="https://slides.com/pricing?h=1"></section>
-				<section data-background-iframe="https://www.microsoft.com/de-de/microsoft-365/business/compare-all-microsoft-365-business-products?market=de"></section>
+				<section>
+					<img data-src="./slidesPricing.png">
+				</section>
 				<section>
 					<h2>Fazit</h2>
-					<table>
-						<tr>
-							<th>Pro</th>
-							<th>Cons</th>
+					<table class="table">
+						<tr class="row">
+							<th class="cell">Pro</th>
+							<th class="cell">Contra</th>
 						</tr>
-						<tr>
-							<td>Framework kostenlos</td>
-							<td>Schwerer Einstieg</td>
+						<tr class="row">
+							<td class="cell">Programmierung</td>
+							<td class="cell">Schwerer Einstieg</td>
 						</tr>
-						<tr>
-							<td>Einfaches einbinden von Webseiten</td>
-							<td>Mittelmäßge Dokumentation</td>
+						<tr class="row">
+							<td class="cell">Einfache Einbindung von Webseiten</td>
+							<td class="cell">Mittelmäßige Dokumentation</td>
 						</tr>
-						<tr>
-							<td>Code Demonstration</td>
-							<td>Speicherung von Projekten</td>
+						<tr class="row">
+							<td class="cell">Kosten</td>
+							<td class="cell">Für viele Nutzer nicht geeignet</td>
+						</tr>
+						<tr class="row">
+							<td class="cell">Code Darstellung</td>
+							<td class="cell">Schwere Organisation</td>
 						</tr>
 					</table>
 				</section>
@@ -117,9 +183,9 @@
 			});
 		</script>
 		<script>
-			const button = document.getElementsByTagName('button');
+			const button = document.querySelector('button');
 
-			button.addEventListener("click", (event) => {
+			button.addEventListener('click', () => {
 				alert('Ich bin ein Event');
 			});
 		</script>
